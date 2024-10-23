@@ -8,50 +8,69 @@ class FooterComponent extends HTMLElement {
         <a href="https://twitter.com/Indio_Solari_Ok" target="_blank">Twitter</a>
         </footer>`;
     }
-  }
-  customElements.define('footer-component', FooterComponent);
+}
+customElements.define('footer-component', FooterComponent);
 
-
-  class HeaderComponent extends HTMLElement {
+class HeaderComponent extends HTMLElement {
     connectedCallback() {
-      this.innerHTML = 
-      `<header>
-          <div>
-            <img src="logo-evento-footer.png" alt="Logo Los Redondos">
-        </div>
-        <div>
-            <h1>LOS REDONDOS</h1>
-        </div>
+        this.innerHTML = 
+        `<header>
+            <img src="img/logo.png" alt="Logo de la banda Los Redondos">
+            <h1>Los Redondos</h1>
         </header>`;
     }
-  }
-  customElements.define('header-component', HeaderComponent);
-
-  function loadPage(pageUrl) {
-    fetch(pageUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error en la solicitud: ' + response.status);
-            }
-            return response.text();
-        })
-        .then(html => {
-            document.getElementById('contentContainer').innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Hubo un problema al cargar la página:', error);
-        });
 }
+customElements.define('header-component', HeaderComponent);
 
+const contentContainer = document.getElementById('contentContainer');
 
 document.getElementById('pagina1').addEventListener('click', function() {
-    loadPage('page1.html');
+    contentContainer.innerHTML = `<div class="body-paginas">
+        <h1>Racing 17/7/1992</h1>
+        <div class="grid">
+            <img src="img/monumental2.jpg">
+            <img src="img/monumental3.jpg">
+            <img src="img/monumental4.jpg">
+            <img src="img/monumental1.jpeg">
+        </div>
+    </div>`;
 });
 
 document.getElementById('pagina2').addEventListener('click', function() {
-    loadPage('page2.html');
+    contentContainer.innerHTML = `<div class="body-paginas">
+        <h1>Huracán 16/12/1994</h1>
+        <div class="grid">
+            <img src="img/monumental4.jpg">
+            <img src="img/monumental1.jpeg">
+            <img src="img/monumental2.jpg">
+            <img src="img/monumental3.jpg">
+        </div>
+    </div>`;
 });
 
 document.getElementById('pagina3').addEventListener('click', function() {
-    loadPage('page3.html');
+    contentContainer.innerHTML = `<div class="body-paginas">
+        <h1>River 14/5/2000</h1>
+        <div class="grid">
+            <img src="img/monumental1.jpeg">
+            <img src="img/monumental3.jpg">
+            <img src="img/monumental4.jpg">
+            <img src="img/monumental2.jpg">
+        </div>
+    </div>`;
 });
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+}
+
+const darkModeButton = document.createElement('button');
+darkModeButton.textContent = 'Cambiar modo';
+darkModeButton.style.position = 'fixed';
+darkModeButton.style.top = '90%';
+darkModeButton.style.right = '10px';
+darkModeButton.style.padding = '10px 20px';
+darkModeButton.style.zIndex = '9999';
+darkModeButton.addEventListener('click', toggleDarkMode);
+
+document.body.appendChild(darkModeButton);
