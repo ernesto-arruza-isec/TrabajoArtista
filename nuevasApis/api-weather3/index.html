@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Clima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Datos del Clima</h1>
+    </header>
+    <form action="" onsubmit="return cargaCiudad(event);">
+        <label for="cityName">Ingresa el nombre de la ciudad</label>
+        <input type="text" id="cityName" name="cityName" placeholder="Ciudad" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <main>
+        <div class="clima" id="clima">
+            <!-- Los datos del clima se cargarán aquí -->
+        </div>
+    </main>
+    <script src="weather.js"></script>
+</body>
+</html>

@@ -38,9 +38,21 @@
                 <p>Contenido inicial. Pulsa los botones para cargar nuevas páginas aquí.</p>
             </div>
             <br>
-            <h2>LETRAS MÁS FAMOSAS</h2>
+            <h2>LETRAS MÁS FAMOSAS</h2> 
+            <main>
+                <article>
+                    <p>Busca una canción de Patricio Rey y sus Redonditos de Ricota</p>
+                    <form id="formulario">
+                        <input type="text" id="cancion" placeholder="Nombre de la canción" required>
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <div id="resultado"></div>
+                </article>
+            </main>
+        
     </article>
     <footer-component></footer-component>
     <script src="script.js"></script>
+    <script src="script-api-letras.js"></script>
 </body>
 </html>

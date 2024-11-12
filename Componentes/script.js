@@ -68,9 +68,9 @@ const darkModeButton = document.createElement('button');
 darkModeButton.textContent = 'Cambiar modo';
 darkModeButton.style.position = 'fixed';
 darkModeButton.style.top = '90%';
-darkModeButton.style.right = '10px';
-darkModeButton.style.padding = '10px 20px';
-darkModeButton.style.zIndex = '9999';
+darkModeButton.style.right = '2%';
+darkModeButton.style.padding = '1% 2%';
+darkModeButton.style.zIndex = '9997';
 darkModeButton.addEventListener('click', toggleDarkMode);
 
 document.body.appendChild(darkModeButton);
