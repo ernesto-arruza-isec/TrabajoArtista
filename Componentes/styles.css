@@ -202,3 +202,13 @@
 #resultado {
     margin-top: 2%;
 }
+
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 35%;
+    padding: 0.5%;
+    border-color: #db370e;
+    border-radius: 6px;
+}

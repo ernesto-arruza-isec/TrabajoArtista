@@ -14,6 +14,7 @@ const cancionesPermitidas = [
     "Don",
     "Tu Misterioso Alguien",
     "Yo te diré",
+    "Siempre que lo beso",
   ];
 
 formulario.addEventListener('submit', (e) => {

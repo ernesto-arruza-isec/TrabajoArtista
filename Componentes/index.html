@@ -43,7 +43,16 @@
                 <article>
                     <p>Busca una canción de Patricio Rey y sus Redonditos de Ricota</p>
                     <form id="formulario">
-                        <input type="text" id="cancion" placeholder="Nombre de la canción" required>
+                        <input type="text" id="cancion" placeholder="Nombre de la canción" required list="canciones">
+                        <datalist id="canciones">
+                            <option value="Don">Don</option>
+                            <option value="Mentia">Mentia</option>
+                            <option value="Perfecta">Perfecta</option>
+                            <option value="Tu Misterioso Alguien">Tu Misterioso Alguien</option>
+                            <option value="Yo te diré">Yo te diré</option>
+                            <option value="Como Amigos">Como Amigos</option>
+                            <option value="Siempre que lo beso">Siempre que lo beso</option>
+                        </datalist>
                         <button type="submit">Buscar</button>
                     </form>
                     <div id="resultado"></div>
